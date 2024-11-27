@@ -22,7 +22,8 @@ class UpdateUserRequest extends FormRequest
             'role_id' => 'required',
             'name' => 'required',
             'email' => 'required|email',
-            'password' => 'nullable'
+            'password' => 'nullable',
+            'active' => 'required'
         ];
     }
 
@@ -32,7 +33,8 @@ class UpdateUserRequest extends FormRequest
             'role_id.required' => 'El rol es requerido',
             'name.required' => 'El nombre es requerido',
             'email.required' => 'El email es requerido',
-            'email.email' => 'El email debe ser válido'
+            'email.email' => 'El email debe ser válido',
+            'active.required' => 'El estado es requerido'
         ];
     }
 

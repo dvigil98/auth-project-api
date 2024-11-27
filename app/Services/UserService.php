@@ -77,7 +77,7 @@ class UserService implements IUserService
             $user->email = $data->email;
             if (!empty($data->password))
                 $user->password = Hash::make($data->password);
-            $user->active = 1;
+            $user->active = $data->active;
 
             if ($this->userRepository->saveOrUpdate($user))
                 return $this->ok(new UserResource($user));
